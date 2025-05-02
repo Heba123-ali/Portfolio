@@ -1,0 +1,597 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body{
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+:root {
+    --bs-blue: #0d6efd;
+    --bs-indigo: #6610f2;
+    --bs-purple: #6f42c1;
+    --bs-pink: #d63384;
+    --bs-red: #dc3545;
+    --bs-orange: #fd7e14;
+    --bs-yellow: #ffc107;
+    --bs-green: #198754;
+    --bs-teal: #20c997;
+    --bs-cyan: #0dcaf0;
+    --bs-white: #fff;
+    --bs-gray: #6c757d;
+    --bs-gray-dark: #343a40;
+    --bs-primary: #015FC9;
+    --bs-secondary: #6c757d;
+    --bs-success: #198754;
+    --bs-info: #0dcaf0;
+    --bs-warning: #ffc107;
+    --bs-danger: #dc3545;
+    --bs-light: #F2F5F9;
+    --bs-dark: #16243D;
+    --h1-size: 48px;
+    --h2-size: 38px;
+    --h3-size: 24px;
+    --paragraph-size-: 18px;
+}
+h1{font-size: var(--h1-size);
+font-weight: 800;}
+h2{font-size: var(--h2-size);}
+h3{font-size: var(--h3-size);}
+p{font-size: var(--paragraph-size-);color: var(--paragraph-color);}
+a{text-decoration: none;}
+li{list-style: none;}
+.container{
+    width: 95%;
+    max-width: 1320px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 32px;
+}
+.p-t{
+    padding-top: 60px;
+}
+section{
+    position: relative;
+}
+section::before{
+    content: "";
+    position: absolute;
+    width: 15%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    background: var(--bs-dark);
+    z-index: -1;
+}
+aside{
+    background-color: var(--bs-dark);
+    color: var(--bs-light);
+}
+ aside h2{
+     color: var(--bs-light);
+     margin-bottom: 24px;
+}
+aside p{
+    font-family: "Edu TAS Beginner", cursive;
+    font-weight: 700;
+    font-size: 22px;
+    color: var(--bs-light);
+    margin-bottom: 24px;
+}
+aside h3{
+    font-size: 2.5rem;
+}
+
+.image-box{
+    background-color: #f2f5f9;
+    border-radius: 68% 32% 100% 0% / 0% 75% 25% 100%;
+    padding: 1.5rem;
+}
+.image-box img{
+    border-radius: 68% 32% 100% 0% / 0% 75% 25% 100%;
+    width: 100%;
+}
+.content {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    gap: 32px;
+}
+.content>div{
+    visibility: visible; 
+    animation-delay: 0.1s; 
+    animation-name: fadeInUp;  
+}
+.content p {
+    margin-block: 20px;
+}
+#hero-ccontent h1{
+    color: var(--bs-dark);
+    font-family: "Jost",sans-serif;
+}
+#hero-ccontent p ,
+.text-box p{
+    color: var(--bs-gray);
+}
+
+#hero-ccontent ul.info li i{
+    color: var(--bs-primary);
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+ #hero-ccontent ul.socials li {
+    margin: 2rem 0 2rem 10px;
+    background-color: var(--bs-primary);
+    display: inline-block;
+    padding: 0.3rem 0.6rem;
+    text-align: center;
+    font-size: 1.5rem;
+    transition: 0.5s ease;
+}
+#hero-ccontent ul.socials li:hover {
+    background-color: var(--bs-dark);
+}
+#hero-ccontent ul.socials li a{
+    color: var(--bs-light) !important;
+} 
+section{
+  border-bottom: 3px solid var(--bs-light);
+}
+  /* ===============================
+     4. Media Queries
+  ================================= */
+  
+  /* 🟡 Tablet*/
+  @media (max-width: 991px) {
+    .container{
+        grid-template-columns: 1fr;
+        place-items: center;
+    }
+    br{
+        display: none;
+    }
+    .content{
+        grid-template-columns: 1fr;
+        padding: 0 2rem;
+    }
+    .content h1{
+        font-size: calc(1.375rem + 1.5vw);
+    }
+     aside{
+        padding: 4rem;
+       
+    }
+    aside h3{
+        font-size: var(--h3-size);
+        margin-bottom: 24px;
+    }
+    section::before{
+        display: none;
+      }
+  }
+  
+  /* 🔴 Mobile*/
+  @media (max-width: 767px) {
+    .container{
+        grid-template-columns: 1fr;
+        place-items: center;
+    }
+    br{
+        display: none;
+    }
+   .content{
+        grid-template-columns: 1fr;
+        padding: 0 2rem;
+    }
+    aside{
+        padding: 3rem;
+       
+    }
+    aside h3{
+        font-size: var(--h3-size);
+        margin-bottom: 24px;
+    }
+   section::before{
+   display: none;
+  }
+}
+
+/* About section     */
+
+.image-about{
+    width: 100%;
+    height: fit-content;
+    background-color: #f2f5f9;
+    padding: 1.5rem;
+    position: relative;
+    overflow: hidden;
+}
+.image-about::before{
+    background-color: rgba(255, 255, 255, 0.3);
+    width: 100%;
+    height: 100%;
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: 0;    
+    transition: top 0.9s ease;
+    z-index: 111;
+}
+.image-about:hover::before{
+    background-color: rgba(255, 255, 255, 0.3);
+    top: 0%;
+}
+.image-about img{
+    width: 100%;
+    max-width: 100%;
+}
+.image-about .socials{
+    position: absolute;
+    top: -100%;
+    left: 20%;
+    transform: translatex(-50%);
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+    opacity: 0;
+    transition: all 0.7s ease;
+    z-index: 222;
+}
+.image-about:hover .socials{
+    top: 20%;
+    left: 20%;
+    opacity: 1;
+}
+.image-about .socials li a {
+    background-color: var(--bs-primary);
+    padding: 0.3rem 0.6rem;
+    text-align: center;
+    font-size: 1.5rem;
+    color: white;
+    border-radius: 6px;
+}
+.text-box p strong{
+    color: #343a40;
+}
+.info-job{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    margin-bottom: 20px;
+}
+ a.btn{
+    color: var(--bs-light);
+    background: var(--bs-primary);
+    padding: 8px 24px;
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+    border: none;
+    transition: 0.5s ease;
+    display: block;
+    margin: 30px auto ;
+    width: max-content;
+}
+a.btn:hover{
+    background: var(--bs-dark);
+    
+}
+#about .content{
+    grid-template-columns: 1fr 2fr;
+    gap: 2.5rem;
+    text-align: left;
+}
+
+/* ===============================
+     4. Media Queries
+  ================================= */
+  
+  /* 🟡 Tablet*/
+ @media (max-width: 991px) {
+    
+ }
+  
+  /* 🔴 Mobile*/
+  @media (max-width: 767px) {
+    #about .content{
+        grid-template-columns: 1fr;
+        padding: 0 2rem;
+        margin: 0 auto;
+    }
+    #about .content .text-box{
+        padding: 3rem 6rem;
+     
+    }
+}
+   
+  
+
+/* ===============================
+     5. Education section
+  ================================= */
+
+ #education .content,
+ #experience .content{
+    display: grid;
+    grid-template-columns:  1fr;
+    gap: 32px;
+    padding: 0 2rem;
+    margin: 2rem 0;
+  }
+.content .education-box{
+    background-color: var(--bs-white);
+     padding: 1rem 1.5rem;
+    border-radius: 0.2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    z-index: 11111;
+}
+.content .education-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    border: 130px solid;
+    border-color: var(--bs-light) var(--bs-light) var(--bs-light) transparent;
+    z-index: -1;
+}
+.content .education-box::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        border: 130px solid;
+        border-color: var(--bs-light) transparent var(--bs-light) var(--bs-light) ;
+        z-index: -1;
+    }
+.year{
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--bs-gray);
+    margin-bottom: 1rem;
+}
+.year span{
+    margin-right: 2rem;
+}
+
+/* ===============================
+     4. Media Queries
+  ================================= */
+
+  /* tablet */
+    @media (max-width: 991px) {
+     
+        .content .education-box{
+            padding: 1rem 1.5rem;
+            margin: 0 auto;
+        }
+        
+        
+    }
+    /* mobile */
+
+/* ===============================
+      /* skills section */
+/* ================================= */
+
+.skills-box{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0 2rem;
+    margin: 2rem ;
+    gap: 2.5rem;
+    justify-content: center;
+    align-items: center;
+}
+.skills-box div{
+    background: var(--bs-light);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 57px;
+    text-align: center;
+    border-radius: 47% 53% 49% 52% / 30% 30% 71% 70% ;
+    font-size: 3rem;
+}
+.skills-box i {
+    color: var(--bs-primary);
+    font-size: 3rem;
+}
+.skills-box strong{
+    color: var(--bs-dark);
+    font-size: 3rem;
+}
+.skills-box p{
+    color: var(--bs-gray);
+    font-size: 1rem;
+    overflow: hidden;
+}
+
+/* ===============================
+     4. Media Queries
+  ================================= */
+
+  /* tablet */
+    @media (max-width: 991px) {
+        #skills .skills-box{
+            grid-template-columns: repeat(3, 1fr);
+            padding: 0 2rem;
+            margin: 0 auto;
+        }
+      
+       
+       
+    }
+    /* mobile */
+    @media (max-width: 767px) {
+        #skills .skills-box{
+            grid-template-columns: repeat(2, 1fr);
+            padding: 0 2rem;
+            margin: 0 auto;
+            gap: 1rem;
+        }
+        #skills aside{
+            padding: 4rem;
+            width: 90%;
+            margin: 0 auto;
+        }
+        #skills h1{
+            font-size: calc(1.375rem + 1.5vw);
+        }
+    
+    }
+    
+/* ===============================
+      /* service section */
+/* ================================= */
+#services .content{
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    align-items: center;
+}
+#services .content .service-box{
+    background: var(--bs-light);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 1rem;
+    gap: 5rem;
+    align-items: center;
+}
+#services .content .service-box p {
+    font-size: 16px;
+    color: var(--bs-gray);
+}
+.service-box div>i{
+        font-size: 4rem;
+        color: var(--bs-gray);
+        display: inline-block;   
+}
+.list p i{
+    color: var(--bs-gray);
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+.service-box i:hover,
+.service-box a:hover{
+    color: var(--bs-primary);
+}
+   
+/* ===============================
+     4. Media Queries
+  ================================= */
+
+  /* tablet */
+    @media (max-width: 991px) {
+     
+        #services .content .service-box{
+            padding: 0 1rem;
+            gap: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+         
+        }
+        .service-box a>h3 {
+            font-size: 16px;
+           
+        }
+        .service-box p {
+            font-size: 14px;
+            margin: 0;
+        }
+    }
+    /* mobile */
+    @media (max-width: 767px) {
+     
+        #services .content .service-box{
+            padding: 0 1rem;
+            gap: 1.5rem;
+            text-align: left;
+        }
+    }
+
+/* ===============================
+      /* portfolio section */     
+/* ================================= */
+
+/* 
+text box  ==   padding 
+info jop == coloum 
+
+skills box== padading
+gap
+font size 
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===============================
+      /* footer section */
+/* ================================= */
+footer {
+    background-color: var(--bs-dark);
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--bs-light);
+  }
+  .social-icons {
+    margin-bottom: 20px;
+  }
+
+  .social-icons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    color: var(--bs-primary);
+    margin: 0 10px;
+    background-color: var(--bs-white);
+    text-align: center;
+    border-radius: 4px;
+    font-size: 30px;
+    transition: background 0.3s, color 0.3s;
+  }
+  .social-icons a:hover {
+    background-color: var(--bs-primary);
+    color: var(--bs-white);
+  }
+
+  .copyright,
+  .designed {
+    font-size: 14px;
+    margin: 5px 0;
+  }
+
+  .designed a {
+    color: var(--bs-white);
+    text-decoration: underline;
+  }
