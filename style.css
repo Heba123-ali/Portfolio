@@ -118,7 +118,7 @@ aside h3{
 }
 #hero-ccontent p ,
 .text-box p{
-    color: var(--bs-gray);
+    color: var(--bs-primary);
 }
 
 #hero-ccontent ul.info li i{
@@ -153,6 +153,7 @@ section{
     .container{
         grid-template-columns: 1fr;
         place-items: center;
+        width: 100%;
     }
     br{
         display: none;
@@ -166,6 +167,7 @@ section{
     }
      aside{
         padding: 4rem;
+        width: 100%;
        
     }
     aside h3{
@@ -296,7 +298,11 @@ a.btn:hover{
   
   /* 🟡 Tablet*/
  @media (max-width: 991px) {
-    
+    .info-job{
+        flex-direction: column;
+        align-items: start;
+        gap: 1rem;
+    }
  }
   
   /* 🔴 Mobile*/
@@ -306,10 +312,7 @@ a.btn:hover{
         padding: 0 2rem;
         margin: 0 auto;
     }
-    #about .content .text-box{
-        padding: 3rem 6rem;
-     
-    }
+   
 }
    
   
@@ -428,29 +431,37 @@ a.btn:hover{
     @media (max-width: 991px) {
         #skills .skills-box{
             grid-template-columns: repeat(3, 1fr);
-            padding: 0 2rem;
-            margin: 0 auto;
+            gap: 10px;
         }
-      
-       
-       
+        #skills aside{
+            padding: 4rem;
+        }
+        .skills-box strong{
+            font-size: 1rem;
+          }
+        .skills-box p{
+            font-size: 8px;
+        }
+        .skills-box i{
+            font-size: 1rem;
+        }
+        .skills-box div{
+            padding: 16px;
+        }
     }
     /* mobile */
     @media (max-width: 767px) {
         #skills .skills-box{
             grid-template-columns: repeat(2, 1fr);
-            padding: 0 2rem;
-            margin: 0 auto;
-            gap: 1rem;
+            gap: 10px;
         }
         #skills aside{
             padding: 4rem;
-            width: 90%;
-            margin: 0 auto;
         }
-        #skills h1{
-            font-size: calc(1.375rem + 1.5vw);
-        }
+  
+      .skills-box div{
+        padding: 10px;
+    }
     
     }
     
@@ -470,7 +481,7 @@ a.btn:hover{
     gap: 5rem;
     align-items: center;
 }
-#services .content .service-box p {
+#services .content .service-box>p {
     font-size: 16px;
     color: var(--bs-gray);
 }
@@ -480,9 +491,12 @@ a.btn:hover{
         display: inline-block;   
 }
 .list p i{
-    color: var(--bs-gray);
+    color: var(--bs-blue);
     font-size: 1.5rem;
     margin-right: 10px;
+}
+.list p{
+    color: var(--bs-primary);
 }
 .service-box i:hover,
 .service-box a:hover{
@@ -497,16 +511,16 @@ a.btn:hover{
     @media (max-width: 991px) {
      
         #services .content .service-box{
-            padding: 0 1rem;
+            padding: 1rem;
             gap: 2rem;
             display: flex;
             flex-direction: column;
-            align-items: start;
+            align-items: center;
+            text-align: center;
          
         }
         .service-box a>h3 {
             font-size: 16px;
-           
         }
         .service-box p {
             font-size: 14px;
@@ -517,9 +531,9 @@ a.btn:hover{
     @media (max-width: 767px) {
      
         #services .content .service-box{
-            padding: 0 1rem;
+            padding:1rem;
             gap: 1.5rem;
-            text-align: left;
+            text-align: center;
         }
     }
 
@@ -528,15 +542,6 @@ a.btn:hover{
 /* ================================= */
 
 /* 
-text box  ==   padding 
-info jop == coloum 
-
-skills box== padading
-gap
-font size 
-
-*/
-
 
 
 
@@ -592,6 +597,6 @@ footer {
   }
 
   .designed a {
-    color: var(--bs-white);
+    color: var(--bs-danger);
     text-decoration: underline;
   }
